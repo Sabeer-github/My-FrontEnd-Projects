@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammadh Sabeer - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+            border: 1px solid black; /* Adding border around the entire content */
+        }
+        .resume-content {
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container button {
+            margin-right: 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        @media print {
+            @page {
+                margin: 0;
+            }
+            body {
+                margin: 1cm; /* Add a small margin for the body */
+            }
+            header, .button-container {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        function downloadResume() {
+            const resume = document.getElementById('resume');
+            const pdf = new jsPDF();
+            pdf.text(20, 20, 'Resume');
+            pdf.fromHTML(resume, 20, 30);
+            pdf.save('your_resume.pdf');
+        }
+
+        function printResume() {
+            // Hide the button container before printing
+            const buttonContainer = document.querySelector('.button-container');
+            buttonContainer.style.display = 'none';
+
+            // Print the resume
+            window.print();
+
+            // Show the button container after printing (optional)
+            buttonContainer.style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="resume-content">
+        <header>
+            <h1>Mohammadh Sabeer</h1>
+            <p>
+                Gulyam (V), Kurnool (Dist), Andhra Pradesh, 518348<br>
+                Email: msabeer7856@gmail.com<br>
+                Phone: 8790945399 / 9533474045<br>
+        </header>
+        
+        <section>
+            <h2>Professional Summary</h2>
+            <p>Enthusiastic front-end developer ,designing and implementing web applications using HTML, CSS, JavaScript, and React. Adept at collaborating with cross-functional teams to deliver high-quality solutions. Strong foundation in Core Java and SQL. Seeking to leverage my skills to contribute to a dynamic development team.</p>
+        </section>
+        
+        <section>
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Front-End:</strong> HTML, CSS, JavaScript, React (Basics)</li>
+                <li><strong>Back-End:</strong> Core Java, SQL (Basics)</li>
+                <li><strong>Tools & Frameworks:</strong>VS Code, Bootstrap</li>
+                <li><strong>Other:</strong> Responsive Design, Cross-Browser Compatibility</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Professional Experience</h2>
+            <h3>Front-End Developer</h3>
+            <p><strong>Gad Equipments</strong>, Kaval Byrsandra<br>
+            </p>
+            <ul>
+                <li>Developed and maintained user-friendly web pages using HTML, CSS, and JavaScript.</li>
+                <li>Implemented responsive design techniques to ensure compatibility across various devices and browsers.</li>
+                <li>Collaborated with designers and back-end developers to improve usability.</li>
+                <li>Participated in code reviews and contributed to team knowledge sharing.</li>
+                <!-- <li>Utilized Git for version control and collaborated on GitHub.</li> -->
+            </ul>
+            
+            <!-- <h3>Junior Developer Intern</h3>
+            <p><strong>Previous Company Name</strong>, Location<br>
+            Month, Year – Month, Year</p>
+            <ul>
+                <li>Assisted in developing web applications with a focus on front-end technologies.</li>
+                <li>Gained hands-on experience with React for building dynamic user interfaces.</li>
+                <li>Contributed to project documentation and codebase maintenance.</li>
+                <li>Engaged in team meetings to discuss project progress and roadblocks.</li>
+            </ul> -->
+        </section>
+        
+        <section>
+            <h2>Education</h2>
+            <p><strong>Bachelor of Technology in Electrical and Electronics Engineering</strong><br>
+            JNTUA, Adoni Andhra Pradesh<br>
+            </p>
+        </section>
+        
+        <section>
+            <h2>Projects</h2>
+            <h3>Personal Portfolio Website</h3>
+            <ul>
+                <li>Created a Commercial Kitchen Equipment website using HTML, CSS, and JavaScript & WordPress</li>
+                <li>Showcased projects and skills, with an emphasis on clean design and usability.</li>
+                <li>Integrated a contact form with basic validation.</li>
+                <li>Here is website link : <a href="https://gadequipments.com/">www.gadequipments.com</a> </li>
+            </ul>
+            
+            <h3>Todo List Application</h3>
+            <ul>
+                <li>Developed a simple to-do list application using Javascript.</li>
+                <li>Implemented features such as adding, deleting, and filtering tasks.</li>
+                <!-- <li>Practiced best practices for component-based architecture.</li> -->
+            </ul>
+        </section>
+        
+        <!-- <section>
+            <h2>Certifications</h2>
+            <ul>
+                <li>[Certification Name], Issuing Organization, Month, Year</li>
+                <li>[Certification Name], Issuing Organization, Month, Year</li>
+            </ul>
+        </section> -->
+        
+        <section>
+            <h2>Languages</h2>
+            <ul>
+                <li>English (Fluent)</li>
+                <li>Kannada (Speak)</li>
+                <li>Hindi (Write and Speak)</li>
+                <li>Telugu (Write and Speak)</li>
+                <li>Tamil (Learning)</li>
+
+            </ul>
+        </section>
+        
+        <!-- <section>
+            <h2>Professional Affiliations</h2>
+            <ul>
+                <li>Member, Professional Organization Name</li>
+                <li>Participant, Relevant Meetup/Conference Name</li>
+            </ul>
+        </section> -->
+        
+        <!-- <section>
+            <h2>References</h2>
+            <p>Available upon request.</p>
+        </section> -->
+    </div>
+
+    <!-- Buttons for download and print -->
+    <div class="button-container">
+        <button onclick="downloadResume()">Download PDF</button>
+        <button onclick="printResume()">Print</button>
+    </div>
+
+    <!-- Hidden section for PDF generation -->
+    <div id="resume" style="display: none;">
+        <header>
+            <h1>Mohammadh Sabeer</h1>
+            <p>Your Address<br>
+            Gulyam (V), Kurnool (Dist), Andhra Pradesh, 518348<br>
+            Email: msabeer7856@gmail.com<br>
+            Phone: 8790945399 / 9533474045<br>
+            <!-- LinkedIn: <a href="https://www.linkedin.com/your-profile" target="_blank">linkedin.com/your-profile</a><br>
+            GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p> -->
+        </header>
+
+        <!-- Copy sections from above as needed -->
+    </div>
+</body>
+</html>
